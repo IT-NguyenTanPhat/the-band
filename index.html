@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The Band</title>
 	<link rel="shortcut icon" href="/assets/icon/band.ico" type="image/x-icon">
 	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/responsive.css">
 	<link rel="stylesheet" href="./assets/icon/themify-icons/themify-icons.css">
 </head>
 <body>
 	<div id="main">
 		<!-- Header -->
 		<div id="header">
-			<ul id="nav" style="list-style-type: none; display: inline-block;">
-				<li><a href="#">Home</a></li>
+			<ul id="nav">
+				<li><a style="display: inline-block" href="#">Home</a></li>
 				<li><a href="#band">Band</a></li>
 				<li><a href="#tour">Tour</a></li>
 				<li><a href="#contact">Contact</a></li>
 				<li>
-					<a href="#">
+					<a href="#" id="mobile-more">
 						More
-						<i class="down-icon ti-menu" style="font-size: 15px;"></i>
+						<i class="menu-icon ti-menu"></i>
 					</a>
 					<ul class="subnav" style="list-style-type: none;">
 						<li><a href="#">Merchandise</a></li>
@@ -28,7 +30,8 @@
 					</ul>
 				</li>
 			</ul>
-			<div class="search-icon text-white fr" style="padding: 13px 24px;"><i class="ti-search"></i></div>
+			<div class="search-icon text-white fr" style="padding: 14px 24px;"><i class="ti-search"></i></div>
+			<div class="mobile-menu btn text-white"><i class="ti-menu"></i></div>
 		</div>
 		<!-- Header -->
 		<!-- Slider -->
@@ -43,9 +46,9 @@
 		<div id="content">
 			<div class="section-content" id="band">
 				<h2 class="section-header text-center">THE BAND</h2>
-				<p class="section-subHeader text-center m-15-0">We love music</p>
+				<p class="section-subHeader text-center m-15-0 o-6">We love music</p>
 				<!-- About section -->
-				<p style="text-align: justify;" class="m-15-0 lh-15">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p style="text-align: justify; line-height:1.5;" class="m-15-0">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<div class="member-list row" style="padding: 32px 0;">
 					<div class="col three-col member-box text-center">
 						<p class="member-name m-15-0">Name</p>
@@ -66,7 +69,7 @@
 			<div class="tour-section" style="background: #000;">
 				<div class="section-content" id="tour">
 					<h2 class="section-header text-white text-center">TOUR DATES</h2>
-					<p class="section-subHeader text-white text-center">Remember to book your tickets!</p>
+					<p class="section-subHeader text-white text-center o-6">Remember to book your tickets!</p>
 					<ul class="tour-ticket">
 						<li>September<span class="sold-out text-white">Sold out</span></li>
 						<li>October<span class="sold-out text-white">Sold out</span></li>
@@ -78,27 +81,27 @@
 							<img src="/assets/img/ticket/newyork.jpg" alt="New York" class="ticket-img">
 							<div class="ticket-info">
 								<b class="ticker-heading">New York</b>
-								<p class="ticket-time m-15-0" style="opacity: 0.6;">Fri 27 Nov 2016</p>
+								<p class="ticket-time m-15-0 o-6">Fri 27 Nov 2016</p>
 								<p class="ticket-content m-15-0">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-								<a href="#" class="btn text-white">Buy Tickets</a>
+								<button class="btn text-white js-buy-ticket">Buy Tickets</button>
 							</div>
 						</div>
 						<div class="col three-col ticket-item">
 							<img src="/assets/img/ticket/paris.jpg" alt="Paris" class="ticket-img">
 							<div class="ticket-info">
 								<b class="ticker-heading">Paris</b>
-								<p class="ticket-time m-15-0" style="opacity: 0.6;">Sat 28 Nov 2016</p>
+								<p class="ticket-time m-15-0 o-6">Sat 28 Nov 2016</p>
 								<p class="ticket-content m-15-0">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-								<a href="#" class="btn text-white">Buy Tickets</a>
+								<button class="btn text-white js-buy-ticket">Buy Tickets</button>
 							</div>
 						</div>
 						<div class="col three-col ticket-item">
 							<img src="/assets/img/ticket/sanfran.jpg" alt="San Francisco" class="ticket-img">
 							<div class="ticket-info">
 								<b class="ticker-heading">San Francisco</b>
-								<p class="ticket-time m-15-0" style="opacity: 0.6;">Sun 29 Nov 2016</p>
+								<p class="ticket-time m-15-0 o-6">Sun 29 Nov 2016</p>
 								<p class="ticket-content m-15-0">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-								<a href="#" class="btn text-white">Buy Tickets</a>
+								<button class="btn text-white js-buy-ticket">Buy Tickets</button>
 							</div>
 						</div>
 					</div>
@@ -109,9 +112,9 @@
 			<!-- Contact section -->
 			<div class="section-content" id="contact">
 				<h2 class="section-header text-center">CONTACT</h2>
-				<p class="section-subHeader text-center m-15-0">Fan?Drop a note!</p>
+				<p class="section-subHeader text-center m-15-0 o-6">Fan?Drop a note!</p>
 				<div class="row" style="padding: 32px 14px;">
-					<div class="col two-col contact-info lh-15" style="font-size: 18px">
+					<div class="col two-col contact-info" style="font-size: 18px">
 						<p><i class="ti-location-pin"></i>Chicago, US</p>
 						<p><i class="ti-mobile"></i>Phone: +00 151515</p>
 						<p><i class="ti-email"></i>Email: mail@mail.com</p>
@@ -120,24 +123,24 @@
 						<form action="">
 							<div class="row">
 								<div class="col two-col">
-									<input type="text" placeholder="Name" required id="form-control" class="lh-15">
+									<input type="text" placeholder="Name" required id="form-control">
 								</div>
 								<div class="col two-col">
-									<input type="email" placeholder="Email" required id="form-control" class="lh-15">
+									<input type="email" placeholder="Email" required id="form-control">
 								</div>
 							</div>
 							<div class="row">
 								<div class="col col-full" style="margin-top: 8px">
-									<input type="text" placeholder="Message" required id="form-control" class="lh-15">
+									<input type="text" placeholder="Message" required id="form-control">
 								</div>
 							</div>
-							<input type="submit" value="SEND" class="btn text-white m-15-0 lh-15 fr" style="margin-right: -8px!important;">
+							<input type="submit" value="SEND" class="btn text-white m-15-0 fr" style="margin-right: -8px!important;">
 						</form>
 					</div>
 				</div>
 			</div>
 			<!-- Contact section -->
-			<div class="map-section"><img src="/assets/img/map.jpg" alt="Map" class="map-img col-full"></div>
+			<div class="map-section"><img src="/assets/img/map.jpg" alt="Map" class="col-full"></div>
 		</div>
 
 		<!-- Footer -->
@@ -154,5 +157,103 @@
 		</div>
 		<!-- Footer -->
 	</div>
+
+	<!-- Buy ticket layout -->
+	<div class="overlay">
+		<div class="modal">
+			<header class="modal-header text-white text-center">
+				<button class="modal-close text-white fr btn js-close-ticket"><i class="ti-close"></i></button>
+				<h2 class="text-header"><i class="ti-bag" style="margin-right: 16px;"></i>Tickets</h2>
+			</header>
+			<div class="modal-container" style="padding: 0 16px;">
+				<label for="quantity-fill" class="modal-label m-15-0">
+					<i class="ti-shopping-cart"></i>
+					Tickets, $15 per person
+				</label>
+				<input type="text" placeholder="How many?" id="quantity-fill" class="col-full">
+				<label for="email-fill" class="modal-label m-15-0">
+					<i class="ti-user"></i>
+					Send To
+				</label>
+				<input type="email" placeholder="Enter email" id="email-fill" class="col-full">
+				<button id="buy-ticket" class="btn text-white col-full">
+					Pay
+					<i class="ti-check"></i>
+				</button>
+				<p class="help fr m-15-0">Need <a href="#" style="color:#2196F3">help?</a></p>
+				<button class="btn-close btn text-white m-15-0 js-close-ticket">Close <i class="ti-close"></i></button>
+			</div>
+		</div>
+	</div>
+	<!-- Buy ticket layout -->
+
+	<!-- Open-close Modal -->
+	<script>
+		const modal = document.querySelector('.overlay')
+		const noClose = document.querySelector('.modal')
+		const buyBtns = document.querySelectorAll('.js-buy-ticket')
+		const closeBtns = document.querySelectorAll('.js-close-ticket')
+
+		function openBuyTicket() {
+			modal.classList.add('open')
+		}
+
+		function closeBuyTicket() {
+			modal.classList.remove('open')
+		}
+
+		for (const buyBtn of buyBtns) {
+			buyBtn.addEventListener('click', openBuyTicket)
+		}
+
+		for (const closeBtn of closeBtns) {
+			closeBtn.addEventListener('click', closeBuyTicket)
+		}	
+
+		modal.addEventListener('click', closeBuyTicket)
+
+		noClose.addEventListener('click', function (event) {
+			event.stopPropagation()	
+		})
+	</script>
+	<!-- Open-close Modal -->
+
+	<script>
+		// Open-close mobile-menu
+		const menu = document.querySelector('.mobile-menu')
+		const header = document.querySelector('#header')
+		const headerHeight = header.clientHeight
+		const textMore = document.querySelector('#mobile-more')
+
+		function creatMore() {
+			const iconMenu = document.createElement('i');
+			textMore.innerText = "MORE";
+			iconMenu.classList.add('ti-menu');
+			iconMenu.style.paddingTop = '7px';
+			iconMenu.style.paddingLeft = '3px';
+			textMore.appendChild(iconMenu);
+		}
+
+		menu.addEventListener('click', function () {
+			if (header.clientHeight == headerHeight) {
+				header.style.height = 'auto';
+				textMore.innerText = "MERCH";
+			}
+			else {
+				creatMore();
+				header.style.height = null;
+			}
+		})
+		// Open-close mobile-menu
+
+		const menuItems = document.querySelectorAll('#nav a[href*="#"')
+
+		for (const item of menuItems) {
+			item.addEventListener('click', function () {
+				creatMore();
+				header.style.height = null;
+			})
+		}
+	</script>
 </body>
 </html>

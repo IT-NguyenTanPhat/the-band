@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
 }
 
+.open {
+	display: flex !important;
+}
+
 .text-white {
 	color: #fff !important;
 }
@@ -51,6 +55,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .fr	{
 	float: right !important;
+}
+
+.o-6 {
+	opacity: 0.6 !important;
 }
 
 .row {
@@ -93,9 +101,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Navigation */
+#nav {
+	list-style-type: none;
+	display: inline-block;
+}
+
 #nav > li{
 	display: inline-block;
-	position: relative;
 }
 
 #nav > li:hover > a,
@@ -117,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 #nav li a{
 	text-decoration: none;
 	line-height: 46px;
-	display: inline-block;
+	display: block;
 }
 
 #nav .subnav {
@@ -135,6 +147,11 @@ h1, h2, h3, h4, h5, h6 {
 	min-width: 160px;
 }
 /* Navigation */
+
+#header .mobile-menu {
+	display: none;
+}
+
 #header .search-icon:hover {
 	background-color: red;
 }
@@ -145,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 46px;
 	padding-top: 50%;
 	position: relative;
-	background: url("/assets/img/slider/slider1.jpg") top center / cover no-repeat;
+	background: url("../img/slider/slider1.jpg") top center / cover no-repeat;
 }
 
 #slider .text-content {
@@ -161,7 +178,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #slider .text-description {
-	font-size: 15px;
 	font-weight: bold;
 }
 /* Slider */
@@ -182,7 +198,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #content .section-subHeader {
 	font-style: italic;
-	opacity: 0.6;
 }
 
 /* Band */
@@ -202,8 +217,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #content .tour-ticket li {
 	border-bottom: 1px solid #ddd;
-	padding: 11px 16px;
-	height: 40px;
+	padding: 10px 16px;
 }
 
 #content .sold-out {
@@ -242,8 +256,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Tour */
 
 /* Contact */
-[class*="ti-"] {
-	width: 30px;
+#contact [class*="ti-"] {
+	margin-right: 14px;
+	line-height: 1.5;
 }
 
 #form-control {
@@ -255,6 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Contact */
 /* Content */
 
+/* Footer */
 #footer {
 	padding: 64px 16px;
 }
@@ -280,3 +296,81 @@ h1, h2, h3, h4, h5, h6 {
 #footer .link-list a:hover{
 	opacity: 0.6;
 }
+/* Footer */
+
+/* Modal */
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.4);
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+.modal {
+	background-color: #fff;
+	width: 900px;
+	min-height: 200px;
+	position: relative;
+	animation: modalFadeIn ease 0.5s;
+}
+
+.modal-header {
+	padding: 32px 16px;
+	height: 130px;
+	background-color: hsl(174, 100%, 29%);
+}
+
+.modal .text-header {
+	font-size: 30px;
+	letter-spacing: 4px;
+}
+
+.modal .modal-close {
+	position: absolute;
+	top: 0px;
+	right: 0;
+	padding: 16px;
+	font-size: 16px;
+}
+
+.modal .modal-label {
+	margin: 15px;
+	display: block;
+}
+
+.modal input {
+	padding: 8px;
+	border: 1px solid #ccc;
+}
+
+.modal-close, #buy-ticket {
+	background-color: #009688;
+}
+
+#buy-ticket {
+	margin: 16px 0;
+	padding: 16px;
+}
+
+.modal .btn-close {
+	background-color: red;
+	padding: 11px 15px;
+}
+/* Animation */
+@keyframes modalFadeIn {
+	from {
+		transform: translateY(-150px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+/* Animation */
+/* Modal */

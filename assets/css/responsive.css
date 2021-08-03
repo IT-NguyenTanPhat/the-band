@@ -1,12 +1,12 @@
 /* Tablet */
-@media (min-width: 740) and (max-width: 1024px){
+@media (min-width: 46.25em) and (max-width: 64em){
 	#content .section-content {
 		max-width: 100%;
 	}
 }
 
 /* Mobile */
-@media (max-width: 739px){
+@media (max-width: 46.1875em){
 	.btn {
 		padding: 15px;
 	}

@@ -36,9 +36,26 @@
 		<!-- Header -->
 		<!-- Slider -->
 		<div id="slider">
-			<div class="text-content text-white text-center">
-				<h3 class="text-header">Los Angeles</h3>
-				<div class="text-description m-15-0">We had the best time playing at Venice Beach!</div>
+			<div id="slider1">
+				<img src="/assets/img/slider/slider1.jpg" alt="Slider" class="slider-img">
+				<div class="text-content text-white text-center">
+					<h3 class="text-header">Los Angeles</h3>
+					<div class="text-description m-15-0">We had the best time playing at Venice Beach!</div>
+				</div>
+			</div>
+			<div id="slider2">
+				<img src="/assets/img/slider/slider2.jpg" alt="Slider" class="slider-img">
+				<div class="text-content text-white text-center">
+					<h3 class="text-header">New York</h3>
+					<div class="text-description m-15-0">The atmosphere in New York is lorem ipsum.</div>
+				</div>
+			</div>
+			<div id="slider3">
+				<img src="/assets/img/slider/slider3.jpg" alt="Slider" class="slider-img">
+				<div class="text-content text-white text-center">
+					<h3 class="text-header">Chicago</h3>
+					<div class="text-description m-15-0">Thank you, Chicago - A night we won't forget.</div>
+				</div>
 			</div>
 		</div>
 		<!-- Slider -->
@@ -187,12 +204,28 @@
 	</div>
 	<!-- Buy ticket layout -->
 
+	<!-- Slider -->
+	<script>
+		let counter = 2;
+		setInterval(function () {
+			for (let i = 1; i <= 3; i++)
+				if (i == counter) 
+					document.querySelector('#slider' + i).style.display = 'block';
+				else 
+					document.querySelector('#slider' + i).style.display = 'none';
+			counter++;
+			if (counter > 3)
+				counter = 1;
+		}, 3000);
+	</script>
+	<!-- Slider -->
+	
 	<!-- Open-close Modal -->
 	<script>
-		const modal = document.querySelector('.overlay')
-		const noClose = document.querySelector('.modal')
-		const buyBtns = document.querySelectorAll('.js-buy-ticket')
-		const closeBtns = document.querySelectorAll('.js-close-ticket')
+		let modal = document.querySelector('.overlay')
+		let noClose = document.querySelector('.modal')
+		let buyBtns = document.querySelectorAll('.js-buy-ticket')
+		let closeBtns = document.querySelectorAll('.js-close-ticket')
 
 		function openBuyTicket() {
 			modal.classList.add('open')
@@ -202,11 +235,11 @@
 			modal.classList.remove('open')
 		}
 
-		for (const buyBtn of buyBtns) {
+		for (let buyBtn of buyBtns) {
 			buyBtn.addEventListener('click', openBuyTicket)
 		}
 
-		for (const closeBtn of closeBtns) {
+		for (let closeBtn of closeBtns) {
 			closeBtn.addEventListener('click', closeBuyTicket)
 		}	
 
@@ -220,13 +253,13 @@
 
 	<script>
 		// Open-close mobile-menu
-		const menu = document.querySelector('.mobile-menu')
-		const header = document.querySelector('#header')
-		const headerHeight = header.clientHeight
-		const textMore = document.querySelector('#mobile-more')
+		let menu = document.querySelector('.mobile-menu')
+		let header = document.querySelector('#header')
+		let headerHeight = header.clientHeight
+		let textMore = document.querySelector('#mobile-more')
 
 		function creatMore() {
-			const iconMenu = document.createElement('i');
+			let iconMenu = document.createElement('i');
 			textMore.innerText = "MORE";
 			iconMenu.classList.add('ti-menu');
 			iconMenu.style.paddingTop = '7px';
@@ -246,9 +279,9 @@
 		})
 		// Open-close mobile-menu
 
-		const menuItems = document.querySelectorAll('#nav a[href*="#"')
+		let menuItems = document.querySelectorAll('#nav a[href*="#"')
 
-		for (const item of menuItems) {
+		for (let item of menuItems) {
 			item.addEventListener('click', function () {
 				creatMore();
 				header.style.height = null;

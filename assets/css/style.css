@@ -8,19 +8,20 @@
 
 /* Common */
 html {
-	font-family: Lato, sans-serif;
+	font-family: Verdana,sans-serif;
 	font-size: 15px;
+	line-height: 1.5;
 	scroll-behavior: smooth;
+}
+
+body {
+	font-family: Lato, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Segoe UI,Arial,sans-serif;
     font-weight: 400;
     margin: 10px 0;
-}
-
-.open {
-	display: flex !important;
 }
 
 .text-white {
@@ -35,22 +36,25 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 15px 0 !important;
 }
 
-.lh-15 {
-	line-height: 1.5 !important;
-}
-
 .btn {
-	padding: 8px 16px;
+	padding: 10px 16px;
 	background-color: #000;
-	display: inline-block;
 	text-decoration: none;
 	border: none;
 	cursor: pointer;
+	color: #fff;
+	font-size: 15px;
 }
 
 .btn:hover {
 	background-color: #ccc !important;
 	color: #000 !important;
+}
+
+.section {
+	width: 800px;
+	margin: 0 auto;
+	padding: 64px 16px;
 }
 
 .fr	{
@@ -61,31 +65,32 @@ h1, h2, h3, h4, h5, h6 {
 	opacity: 0.6 !important;
 }
 
-.row {
-	margin: 0 -16px;
+.p-32-0 {
+	padding: 32px 0;
 }
+
+.header {
+	font-size: 30px;
+	letter-spacing: 4px;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
 .row::after {
 	display: block;
 	clear: both;
 	content: "";
 }
 
-.col {
-	float: left;
-	padding-left: 8px;
-	padding-right: 8px;
-}
-
-.three-col {
-	width: 33.33333%;
-}
-
-.two-col {
-	width: 50%;
-}
-
-.col-full {
+.full {
 	width: 100%;
+}
+
+.half {
+	flex: 1;
 }
 /* Common */
 
@@ -101,50 +106,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Navigation */
-#nav {
+#nav, .subnav {
 	list-style-type: none;
-	display: inline-block;
 }
 
-#nav > li{
+#nav, #nav > li{
 	display: inline-block;
-}
-
-#nav > li:hover > a,
-#nav .subnav li:hover a{ 
-	color: black;
-	background: #ccc;
 }
 
 #nav li:hover .subnav {
 	display: block;
 }
 
-#nav > li > a{
-	color: #fff;
+#nav #button-more,
+#nav > li > a {
+	padding: 14.5px 24px;
 	text-transform: uppercase;
-	padding: 0 24px;
 }
 
-#nav li a{
-	text-decoration: none;
-	line-height: 46px;
-	display: block;
+#nav #button-more{
+	padding: 4px 8px;
+	background-color: inherit;
+	color: inherit;
 }
 
 #nav .subnav {
 	display: none;
+	top: 46px;
+	margin-left: -16px;
 	position: absolute;
-	background-color: #fff;
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 #nav .subnav a{
 	color: #000;
-	display: block;
-	padding: 0 16px;
-	line-height: 38px;
 	min-width: 160px;
+	display: block;
+	background-color: #fff;
 }
 /* Navigation */
 
@@ -152,8 +150,12 @@ h1, h2, h3, h4, h5, h6 {
 	display: none;
 }
 
+#header .search-icon {
+	padding: 12px 24px;
+}
+
 #header .search-icon:hover {
-	background-color: red;
+	background-color: red !important;
 }
 /* Header */
 
@@ -168,14 +170,12 @@ h1, h2, h3, h4, h5, h6 {
 	display: none;
 }
 
-.slider-img {
+#slider .slider-img {
 	position: absolute;
 	top: 0;
-	width: 100%;
 }
 
 #slider .text-content {
-	width: 100%;
 	position: absolute;
 	bottom: 0;
 	padding: 32px;
@@ -183,101 +183,83 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #slider .text-header {
-	font-weight: 400;
 	font-size: 24px;
-}
-
-#slider .text-description {
-	font-weight: bold;
 }
 /* Slider */
 
 /* Content */
-#content .section-content {
-	padding: 64px 16px;
-	max-width: 800px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#content .section-header {
-	font-size: 30px;
-	letter-spacing: 4px;
-	height: 44px;
-}
-
-#content .section-subHeader {
-	font-style: italic;
-}
-
 /* Band */
-#content .member-img {
+#band .member-img {
 	width: 60%;
 	border-radius: 4px;
+}
+
+#band .about {
+	text-align: justify; 
 }
 /* Band */
 
 /* Tour */
-#content .tour-ticket {
+#tour .tour-ticket {
 	background-color: #fff;
 	color: #757575;
 	list-style-type: none;
-	margin-top: 40px;
+	margin-top: 32px;
 }
 
-#content .tour-ticket li {
+#tour .tour-ticket li {
 	border-bottom: 1px solid #ddd;
-	padding: 10px 16px;
+	padding: 8px 16px;
 }
 
-#content .sold-out {
+#tour .sold-out {
 	background-color: red;
 	margin-left: 16px;
 	padding: 3px 8px;
 }
 
-.remain {
+#tour .remain {
 	margin-right: 16px;
 	background-color: #000;
 	border-radius: 50%;
-	padding: 2px 8px;
+	padding: 0px 8px;
 }
 
-/* Tour places */
-.ticket-item {
+#tour .ticket-item {
 	padding: 0 8px;
 }
 
-.ticket-img {
-	width: 100%;
+#tour .ticket-img {
 	display: block;
 }
 
-.ticket-img:hover {
-	opacity: 60%;
+#tour .ticket-img:hover {
+	opacity: 0.6;
 }
 
-.ticket-info {
+#tour .ticket-content {
 	background-color: #fff;
 	padding: 16px;
-	line-height: 22px;
 }
-/* Tour places */
 /* Tour */
 
 /* Contact */
-#contact [class*="ti-"] {
-	margin-right: 14px;
-	line-height: 1.5;
+#contact .contact-info {
+	font-size: 18px;
 }
 
-#form-control {
-	padding: 9px;
-	width: 100%;
+#contact [class*="ti-"] {
+	margin-right: 14px;
+}
+
+#contact .form-fill {
+	padding: 11px;
 	border: 1px solid #ccc;
-	display: block;
 }
 /* Contact */
+.map {
+	filter: grayscale(50%);
+}
 /* Content */
 
 /* Footer */
@@ -289,22 +271,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 24px;
 }
 
-#footer .author{
-	color: rgba(0,0,0,0.5);
+#footer a {
+	color: #000;
 }
 
-#footer a{
-	color: rgba(0,0,0,0.6);
-	text-decoration: none;
-}
-
-#footer .author a{
-	color: rgba(0,0,0,0.5);
-	text-decoration: underline;
-}
-
-#footer .link-list a:hover{
-	opacity: 0.6;
+#footer .link-list i:hover,
+#footer p {
+	opacity: 0.5;
 }
 /* Footer */
 
@@ -316,9 +289,8 @@ h1, h2, h3, h4, h5, h6 {
 	left: 0;
 	right: 0;
 	background-color: rgba(0,0,0,0.4);
-	align-items: center;
-	justify-content: center;
 	display: none;
+	z-index: 1;
 }
 
 .modal {
@@ -327,49 +299,38 @@ h1, h2, h3, h4, h5, h6 {
 	min-height: 200px;
 	position: relative;
 	animation: modalFadeIn ease 0.5s;
+	margin: auto;
 }
 
 .modal-header {
 	padding: 32px 16px;
-	height: 130px;
-	background-color: hsl(174, 100%, 29%);
-}
-
-.modal .text-header {
-	font-size: 30px;
-	letter-spacing: 4px;
-}
-
-.modal .modal-close {
-	position: absolute;
-	top: 0px;
-	right: 0;
-	padding: 16px;
-	font-size: 16px;
-}
-
-.modal .modal-label {
-	margin: 15px;
-	display: block;
-}
-
-.modal input {
-	padding: 8px;
-	border: 1px solid #ccc;
-}
-
-.modal-close, #buy-ticket {
 	background-color: #009688;
 }
 
-#buy-ticket {
-	margin: 16px 0;
+.modal .close-icon {
+	background-color: inherit;
+	top: 0;
+	right: 0;
+	position: absolute;
+}
+
+.modal .modal-container {
+	padding: 0 16px;
+}
+
+.modal input {
+	padding: 10px;
+	font-size: 15px;
+	border: 1px solid #ccc;
+}
+
+.modal .pay {
+	background-color: #009688;
 	padding: 16px;
 }
 
-.modal .btn-close {
+.modal .modal-close {
 	background-color: red;
-	padding: 11px 15px;
 }
 /* Animation */
 @keyframes modalFadeIn {

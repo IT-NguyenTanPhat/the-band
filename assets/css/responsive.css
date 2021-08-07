@@ -1,20 +1,27 @@
+/* Tablet */
+@media (min-width: 740px) and (max-width:1023px){
+	.modal {
+		width: 600px;
+	}
+}
+
 /* Mobile */
 @media (max-width: 46.1875em){
-	.btn {
-		padding: 15px;
+	.section {
+		width: 100%;
 	}
 
-	.two-col, .three-col {
-		width: 100%;
+	.row {
+		flex-direction: column;
+	}
+
+	#nav .home-button {
+		display: inline-block;
 	}
 
 	#nav > li,
 	#nav {
 		display: block;
-	}
-
-	#nav .menu-icon {
-		display: none;
 	}
 
 	#header {
@@ -26,23 +33,29 @@
 	}
 
 	#header .mobile-menu {
-		padding: 14px 24px;
+		padding: 12px 24px;
 		position: absolute;
 		top: 0;
 		right: 0;
 		display: block;
 	}
 
-	#slider .text-content {
-		padding: unset;
+	#slider .slider-content,
+	#contact .row > div {
+		padding: unset !important;
 	}
 
 	#tour .ticket-item,
 	#contact .contact-info {
+		padding: unset;
 		margin-bottom: 16px;
 	}
-	
-	#form-control {
-		padding: 15px;
+
+	#contact .form-fill {
+		width: 100%;
+	}
+
+	.modal {
+		width: 400px;
 	}
 }

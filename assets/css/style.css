@@ -114,13 +114,15 @@ h1, h2, h3, h4, h5, h6 {
 	display: inline-block;
 }
 
+
 #nav li:hover .subnav {
 	display: block;
 }
 
 #nav #button-more,
 #nav > li > a {
-	padding: 14.5px 24px;
+	display: block;
+	padding: 12px 24px;
 	text-transform: uppercase;
 }
 
@@ -175,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 }
 
-#slider .text-content {
+#slider .slider-content {
 	position: absolute;
 	bottom: 0;
 	padding: 32px;
@@ -296,7 +298,6 @@ h1, h2, h3, h4, h5, h6 {
 .modal {
 	background-color: #fff;
 	width: 900px;
-	min-height: 200px;
 	position: relative;
 	animation: modalFadeIn ease 0.5s;
 	margin: auto;

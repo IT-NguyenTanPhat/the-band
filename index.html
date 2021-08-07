@@ -14,7 +14,7 @@
 		<!-- Header -->
 		<div id="header">
 			<ul id="nav">
-				<li><a class="btn" style="display: inline" href="#">Home</a></li>
+				<li><a class="home-button btn" href="#">Home</a></li>
 				<li><a class="btn" href="#band">Band</a></li>
 				<li><a class="btn" href="#tour">Tour</a></li>
 				<li><a class="btn" href="#contact">Contact</a></li>
@@ -39,21 +39,21 @@
 		<div id="slider">
 			<div id="slider1">
 				<img src="/assets/img/slider/slider1.jpg" alt="Slider" class="slider-img full">
-				<div class="text-content full text-white text-center">
+				<div class="slider-content full text-white text-center">
 					<h3 class="text-header">Los Angeles</h3>
 					<div class="m-15-0"><strong>We had the best time playing at Venice Beach!</strong></div>
 				</div>
 			</div>
 			<div id="slider2">
 				<img src="/assets/img/slider/slider2.jpg" alt="Slider" class="slider-img full">
-				<div class="text-content full text-white text-center">
+				<div class="slider-content full text-white text-center">
 					<h3 class="text-header">New York</h3>
 					<div class="m-15-0"><strong>The atmosphere in New York is lorem ipsum.</strong></div>
 				</div>
 			</div>
 			<div id="slider3">
 				<img src="/assets/img/slider/slider3.jpg" alt="Slider" class="slider-img full">
-				<div class="text-content full text-white text-center">
+				<div class="slider-content full text-white text-center">
 					<h3 class="text-header">Chicago</h3>
 					<div class="m-15-0"><strong>Thank you, Chicago - A night we won't forget.</strong></div>
 				</div>
@@ -147,9 +147,9 @@
 						<p><i class="ti-email"></i>Email: mail@mail.com</p>
 					</div>
 					<div class="half">
-						<div class="row" style="margin-bottom: 8px">
-							<div style="padding-right: 8px;"><input type="text" placeholder="Name" required class="form-fill"></div>
-							<div style="padding-left: 8px;"><input type="email" placeholder="Email" required class="form-fill"></div>
+						<div class="row" style="margin-bottom: 8px;">
+							<div style="padding-left: 8px;"><input type="text" placeholder="Name" required class="form-fill"></div>
+							<div style="padding-right: 8px;"><input type="email" placeholder="Email" required class="form-fill"></div>
 						</div>
 						<input type="text" placeholder="Message" required class="form-fill full">
 						<input type="submit" value="SEND" class="btn m-15-0 fr">
@@ -240,19 +240,17 @@
 	</script>
 	<!-- Buy tickets Modal -->
 
+	<!-- // Open-close mobile-menu -->
 	<script>
-		// Open-close mobile-menu
 		let menu = document.querySelector('.mobile-menu')
 		let header = document.querySelector('#header')
 		let headerHeight = header.clientHeight
-		let textMore = document.querySelector('#mobile-more')
+		let textMore = document.querySelector('#button-more')
 
 		function creatMore() {
 			let iconMenu = document.createElement('i');
-			textMore.innerText = "MORE";
+			textMore.innerText = "MORE ";
 			iconMenu.classList.add('ti-menu');
-			iconMenu.style.paddingTop = '7px';
-			iconMenu.style.paddingLeft = '3px';
 			textMore.appendChild(iconMenu);
 		}
 
@@ -266,7 +264,6 @@
 				header.style.height = null;
 			}
 		})
-		// Open-close mobile-menu
 
 		let menuItems = document.querySelectorAll('#nav a[href*="#"')
 

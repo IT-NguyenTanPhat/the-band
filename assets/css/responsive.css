@@ -7,7 +7,8 @@
 
 /* Mobile */
 @media (max-width: 46.1875em){
-	.section {
+	.section,
+	#contact .form-fill {
 		width: 100%;
 	}
 
@@ -28,8 +29,9 @@
 		overflow: hidden;
 	}
 
-	#header .search-icon {
-		display: none;
+	#header .search-icon,
+	#nav .subnav {
+		display: none !important;
 	}
 
 	#header .mobile-menu {
@@ -49,10 +51,6 @@
 	#contact .contact-info {
 		padding: unset;
 		margin-bottom: 16px;
-	}
-
-	#contact .form-fill {
-		width: 100%;
 	}
 
 	.modal {
